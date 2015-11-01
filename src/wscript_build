@@ -38,3 +38,6 @@ for target in build_features:
 ctx.install_files('${PREFIX}/include/aubio/',
         ctx.path.ant_glob('**/*.h', excl = ['**_priv.h', 'config.h']),
         relative_trick=True)
+ctx.install_files('${PREFIX}/include/aubio/', 
+        ctx.path.ant_glob('module.modulemap'),
+        relative_trick=True)
